@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
-
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const CardWrapper = styled.div`
     width: 100%;
@@ -8,6 +7,7 @@ export const CardWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 30px;
 `;
 
 export const CardContainer = styled(motion.div)`
