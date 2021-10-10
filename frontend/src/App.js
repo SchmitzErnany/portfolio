@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import GlobalStyle from './styles/global';
+import { Container } from './styles';
+
+import { PythonCard } from './components/PythonCard';
+import { JavascriptCard } from './components/JavascriptCard';
+import { MongoCard } from './components/MongoCard';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        <PythonCard />
+      </Container>
+      <Container>
+        <JavascriptCard />
+      </Container>
+      <Container>
+        <MongoCard />
+      </Container>
+      <GlobalStyle />
+    </>
   );
 }
 
