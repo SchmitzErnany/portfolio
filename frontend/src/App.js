@@ -25,7 +25,7 @@ function App() {
           <JavascriptCard />
         </Container>
       </Route>
-      <Route exact path="/">
+      <Route exact path="/skills">
         <Container>
           <MongoCard />
         </Container>
