@@ -27,15 +27,11 @@ function App() {
       <Route exact path="/">
         <HomeContainer>
           <HomeTopContainer>
-            <Text>Welcome to my portfolio</Text>
+            <Text>Welcome to ers's portfolio</Text>
           </HomeTopContainer>
           <HomeBottomContainer>
             <Marginer direction="vertical" margin="5em" />
-            <HomeCardRow sources={[back7, back5, back6, back4]} strokes={["#F8764F", "#F8764F", "#F8764F", "#F8764F"]} />
-          </HomeBottomContainer>
-          <HomeBottomContainer>
-            <Marginer direction="vertical" margin="5em" />
-            <HomeCardRow sources={[back7, back5, back4]} strokes={["#F8764F", "#F8764F", "#F8764F"]} />
+            <HomeCardRow sources={[back5, back6, back7, back4]} strokes={["t#FFBF8B", "t#FFBF8B", "t#FFBF8B", "t#FFBF8B"]} texts={["prior knowledge", "computer languages", "tools", "projects"]}/>
           </HomeBottomContainer>
         </HomeContainer>
         <CardsContainer>

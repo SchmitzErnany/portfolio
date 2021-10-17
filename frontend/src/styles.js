@@ -2,6 +2,7 @@ import BackgroundDef from 'react-hexagon/lib/BackgroundDef';
 import styled from 'styled-components';
 
 import backzao from './backzao.jpg'
+import backzao2 from './backzao2.jpg'
 
 export const CardsContainer = styled.div`
   height: 100%;
@@ -9,11 +10,10 @@ export const CardsContainer = styled.div`
   display: flex;
   align-items: center;
   overflow: auto;
-
-  // background-image: url(${backzao});
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  background-image: url(${backzao});
+  background-size: cover;
+  position: relative;
+  background-position: center;
 `;
 
 // REMOVED justify-content: center; FROM ABOVE
@@ -26,9 +26,10 @@ export const HomeContainer = styled.div`
   align-items: center;
   overflow: auto;
   // background-color: #42216a;
-  background-image: url(${BackgroundDef});
+  background-image: url(${backzao2});
   background-size: cover;
   position: relative;
+  background-position: center;
 
   // background-image: url(${backzao});
   // background-position: center;
@@ -58,8 +59,9 @@ export const HomeBottomContainer = styled.div`
 `;
 
 export const Text = styled.h1`
-  color: #F8764F;
+  color: #FFBF8B;
   text-transform: uppercase;
   font-size: 4em;
+  font-family: sans-serif, helvetica, arial;
   font-weight: 900;
 `;
