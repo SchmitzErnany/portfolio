@@ -31,10 +31,7 @@ export const HomeContainer = styled.div`
   position: relative;
   background-position: center;
 
-  // background-image: url(${backzao});
-  // background-position: center;
   // background-repeat: no-repeat;
-  // background-size: cover;
 `;
 
 export const HomeTopContainer = styled.div`
@@ -56,6 +53,7 @@ export const HomeBottomContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0 1em;
+  margin: 20px;
 `;
 
 export const Text = styled.h1`
