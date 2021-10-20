@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export const Card = styled(motion.div).attrs(
     {
-        whileHover: { scale: 1.03 , delay: true},
-        transition: {type: "spring"}
+        whileHover: { scale: 1.03, delay: true },
+        transition: { type: "spring" }
     }
 )`
     width: 100%;
@@ -52,16 +52,21 @@ export const RowContainer = styled.div`
 export const Text = styled.h1`
     font-size: 2em;
     font-family: sans-serif, helvetica, arial;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
-    color: #FFBF8B;
+    text-shadow: 0px 0px 4px ${props => (props.textShadow)};
+    color: ${props => (props.textColor)};
     padding: 20px;
 `;
 
 export const Subtext = styled.p`
     font-weight: 400;
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-family: sans-serif, helvetica, arial;
-    text-shadow: 0px 0px 4px rgba(255, 255, 255, 1);
-    color: #000;
+    text-shadow: 0px 0px 4px ${props => (props.subtextShadow)};
+    color: ${props => (props.subtextColor)};
     padding: 20px;
+
+    // display: inline-block;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
 `;

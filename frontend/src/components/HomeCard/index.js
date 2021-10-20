@@ -1,6 +1,6 @@
 import { Card, Text, HomeCardContainer, RowContainer, Subtext, HomeCardWrapper } from './styles';
 
-import backgroundImage from '../../background.jpg'
+import backgroundImage from './images/background.jpg'
 
 import { Marginer } from '../marginer';
 
@@ -8,30 +8,29 @@ const _ = require("lodash");
 
 
 function HomeCard(props) {
-    const strokeFeature = props.stroke || "nostroke";
-    const backImg = props.src || backgroundImage;
-    const text = props.text || "";
-    const subtext = props.subtext || "";
-    const flex = props.flex || "";
+    const backImg = props.cardFeatures.source || backgroundImage;
+    const text = props.cardFeatures.text || "";
+    const textColor = props.cardFeatures.textColor || "#FFBF8B";
+    const textShadow = props.cardFeatures.textShadow || "rgba(0, 0, 0, 1)";
+    const subtext = props.cardFeatures.subtext || "";
+    const subtextColor = props.cardFeatures.subtextColor || "black";
+    const subtextShadow = props.cardFeatures.subtextShadow || "rgba(255, 255, 255, 0.5)";
+    const flex = props.cardFeatures.flex || "";
     return (
         <Card src={backImg} flex={flex}>
-            <Text>{text}</Text>
-            <Subtext>{subtext}</Subtext>
+            <Text textColor={textColor} textShadow={textShadow}>{text}</Text>
+            <Subtext subtextColor={subtextColor} subtextShadow={subtextShadow}>{subtext}</Subtext>
         </Card>
     )
 }
 
 export function HomeCardRow(props) {
-    const sources = props.sources;
-    const texts = props.texts;
-    const subtexts = props.subtexts;
-    const flexes = props.flexes;
-    const indices = _.range(sources.length);
+    const cardsFeatures = props.cardsFeatures;
     let indicesPairs = [];
     let pair = [];
-    for (let i = 0; i < sources.length; i++) {
+    for (let i = 0; i < cardsFeatures.length; i++) {
         pair.push(i)
-        if (pair.length === 2 || (i === sources.length - 1)) {
+        if (pair.length === 2 || (i === cardsFeatures.length - 1)) {
             indicesPairs.push(pair)
             pair = []
         }
@@ -43,7 +42,7 @@ export function HomeCardRow(props) {
                     <RowContainer key={pair[0]}>
                         {
                             pair.map(index => (
-                                <HomeCard key={index} src={sources[index]} text={texts[index]} subtext={subtexts[index]} flex={flexes[index]} />
+                                <HomeCard key={index} cardFeatures={cardsFeatures[index]} />
                             ))
                         }
                     </RowContainer>
